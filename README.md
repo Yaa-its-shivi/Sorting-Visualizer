@@ -1,16 +1,61 @@
-# React + Vite
+# 🎯 Sorting Algorithm Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sorting algorithms are usually taught with static diagrams…  
+but algorithms are **motion**, not just logic.  
+This project transforms DSA into animation — so you can *see* how data moves.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 🧩 Supports multiple algorithms:
+  - Bubble Sort
+  - Selection Sort
+  - Insertion Sort
+- 🎬 Step-by-step animations
+- ⏱ 1 second interval replay
+- 📊 Chart-based visualization
+- 🎨 Built with React + Tailwind + Recharts
+- 🧠 Perfect for students learning DSA
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧩 Algorithms Implemented
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Algorithm | Best | Average | Worst | Space | Stable |
+|---|---|---|---|---|---|
+| Bubble | O(n) | O(n²) | O(n²) | O(1) | Yes |
+| Selection | O(n²) | O(n²) | O(n²) | O(1) | No |
+| Insertion | O(n) | O(n²) | O(n²) | O(1) | Yes |
+
+---
+
+## 🎮 Algorithm Personalities
+
+> A fun way to remember sorting algorithms 😄
+
+🟣 Bubble Sort — The Friendly Beginner
+→ Swaps neighbors until sorted.
+
+🟢 Selection Sort — The Minimalist
+→ Always picks the smallest at each step.
+
+🟡 Insertion Sort — The Organized One
+→ Builds a sorted section as it moves.
+
+🔵 Merge Sort — The Divider (coming soon)
+🔴 Quick Sort — The General (coming soon)
+
+Every algorithm generates a list of **snapshots** like:
+
+```json
+{
+  "array": [5, 3, 1, 2],
+  "i": 1,
+  "j": 2,
+  "swapped": true
+}
+
+setInterval(() => {
+  setCurrentStep(stepIndex++);
+}, 1000);
